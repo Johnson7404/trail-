@@ -1,0 +1,101 @@
+function addTransaction() {
+  const description = document.getElementById("description").value;
+  const amount = parseFloat(document.getElementById("amount").value);
+
+  if (!description || isNaN(amount)) {
+    alert("Please enter a valid description and amount.");
+    return;
+  }
+
+  const transaction = {
+    description,
+    amount,
+    id: Date.now()
+  };
+
+  // Save to localStorage
+  const transactions = getStoredTransactions();
+  transactions.unshift(transaction);
+  localStorage.setItem("transactions", JSON.stringify(transactions));
+function getStoredTransactions() {
+  const stored = localStorage.getItem("transactions");
+  return stored ? JSON.parse(stored) : [];
+}
+
+  renderTransactions(); // Update UI
+  document.getElementById("description").value = "";
+  document.getElementById("amount").value = "";
+}
+function renderTransactions() {
+  const list = document.querySelector(".transactions ul");
+  list.innerHTML = ""; 
+  const transactions = getStoredTransactions();
+
+  transactions.forEach(tx => {
+    const li = document.createElement("li");
+
+    const span1 = document.createElement("span");
+    span1.textContent = tx.description;
+
+    const span2 = document.createElement("span");
+    span2.className = "amount";
+    if (tx.amount >= 0) {
+      span2.classList.add("income");
+    }
+    span2.textContent = `${tx.amount >= 0 ? "+ " : "- "}$${Math.abs(tx.amount).toFixed(2)}`;
+
+    li.appendChild(span1);
+    li.appendChild(span2);
+    list.appendChild(li);
+  });
+}
+
+
+  const list = document.querySelector(".transactions ul");
+
+  const li = document.createElement("li");
+
+  const span1 = document.createElement("span");
+  span1.textContent = description;
+
+  const span2 = document.createElement("span");
+  span2.className = "amount";
+  if (amount >= 0) {
+    span2.classList.add("income");
+  }
+  span2.textContent = `${amount >= 0 ? "+ " : "- "}$${Math.abs(amount).toFixed(2)}`;
+
+  li.appendChild(span1);
+  li.appendChild(span2);
+  list.prepend(li); // Add to top of list
+
+  // Clear input
+  document.getElementById("description").value = "";
+  document.getElementById("amount").value = "";
+
+function login() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  if (!username || !password) {
+    alert("Please enter both username and password.");
+    return;
+  }
+
+  // Fake login check
+  if (username === "user" && password === "1234") {
+    document.getElementById("login-screen").style.display = "none";
+    document.getElementById("dashboard").style.display = "flex"; // Show dashboard
+  } else {
+    alert("Invalid credentials. Try user / 1234.");
+  }
+}
+function logout() {
+  document.getElementById("dashboard").style.display = "none";
+  document.getElementById("login-screen").style.display = "flex";
+  
+  // Optional: clear input fields
+  document.getElementById("username").value = "";
+  document.getElementById("password").value = "";
+}
+renderTransactions();

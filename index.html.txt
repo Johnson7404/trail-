@@ -1,0 +1,64 @@
+<div id="login-screen">
+  <div class="login-box">
+    <h2>Welcome to ChaseClone</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+
+<div id="dashboard" style="display: none;">
+  <!-<div class="dashboard-container">
+  <aside class="sidebar">
+    <h2>ChaseClone</h2>
+    <ul>
+      <li>🏠 Dashboard</li>
+      <li>💳 Accounts</li>
+      <li>📄 Statements</li>
+      <li>⚙️ Settings</li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <header class="dashboard-header">
+  <div>
+    <h1>Hello, Jane Doe</h1>
+    <p>Welcome back to your dashboard</p>
+  </div>
+  <button class="logout-btn" onclick="logout()">Logout</button>
+</header>
+
+
+    <section class="account-card">
+      <h2>Checking Account</h2>
+      <p class="balance">$10,156,725.96</p>
+      <p class="account-number">Account •••• 1234</p>
+    </section>
+
+    <section class="transactions">
+      <h2>Recent Transactions</h2>
+      <ul>
+        <li>
+         
+        </li>
+        <li>
+          <span>Direct Deposit</span>
+          <span     class="amount income"> +$10,156,725.96</span>
+        </li>
+        <li>
+          
+        </li>
+      </ul>
+    </section>
+  </main>
+</div>
+<section class="add-transaction">
+  <h2>Add a Transaction</h2>
+  <input type="text" id="description" placeholder="Description (e.g., Starbucks)" />
+  <input type="number" id="amount" placeholder="Amount (e.g., -25.00)" />
+  <button onclick="addTransaction()">Add Transaction</button>
+</section>
+ -->
+</div>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
