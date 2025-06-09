@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JPMORGAN CHASE</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+
+  <!-- 🔐 LOGIN SCREEN -->
+  <div id="login-screen">
+  <div class="login-screen">
+    <h1>JPMORGAN CHASE</h1>
+    <input type="text" id="username" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+
+
+  <!-- 📊 DASHBOARD -->
+   <div class="dashboard-topbar">
+  <h2 class="bank-name">JPMORGAN CHASE</h2>
+  <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+  <div class="mobile-dashboard">
+  <div class="greeting-card">
+    <p class="greeting-title">Hello, Jesse Meadows</p>
+    <p class="greeting-sub">Preferred Rewards Member</p>
+  </div>
+
+  <div class="account-card">
+    <p class="card-label">Net Worth</p>
+    <p class="card-amount">$10,549,753.00</p>
+  </div>
+
+  <div class="account-card">
+    <p class="card-label">Checkings</p>
+    <p class="card-amount">$0.00</p>
+  </div>
+
+  <div class="account-card">
+    <p class="card-label">Credit Cards</p>
+    <p class="card-amount">$0.00</p>
+  </div>
+
+  <div class="account-card">
+    <p class="card-label">Investments</p>
+    <p class="card-amount">$10,549,753.00</p>
+  </div>
+
+<div class="account-card">
+  <p class="card-label">Savings</p>
+  <p class="card-amount">$0.00</p>
+</div>
+
+<div class="account-card">
+  <p class="card-label">IRA</p>
+  <p class="card-amount">$0.00</p>
+</div>
+
+<div class="bottom-tab-bar">
+  <div class="tab-item active">
+    <i class="fas fa-wallet"></i>
+    <span>Accounts</span>
+  </div>
+  <div class="tab-item">
+    <i class="fas fa-exchange-alt"></i>
+    <span>Transfer</span>
+  </div>
+  <div class="tab-item">
+    <i class="fas fa-camera"></i>
+    <span>Deposit</span>
+  </div>
+  <div class="tab-item">
+    <i class="fas fa-file-alt"></i>
+    <span>Docs</span>
+  </div>
+  <div class="tab-item">
+    <i class="fas fa-bars"></i>
+    <span>More</span>
+  </div>
+</div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
